@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<!-- about font small 2 lines only tooltip
+icons 8 and filled
+mobile,whatsapp,email,website,instagram,facebook,twitter,linkedin
+save,share bottom icons
+
+-->
+
+<body>
+    <style>
+        .main-container {
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+            background-color: gray;
+            padding: 0;
+            min-width: 100vw;
+            padding-top: 50px;
+        }
+
+        .card {
+            max-width: 300px;
+            margin: auto;
+            min-height: 500px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .img {
+            width: 100%;
+            height: 170px;
+            object-fit: fill;
+            border-radius: 15px 15px 0px 0px;
+
+        }
+
+        .img>img {
+            height: 250px;
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .card-body-content {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        .title {
+            font-size: 20px;
+            text-align: center;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+
+        .designation {
+            font-size: 15px;
+            text-align: center;
+            padding-top: 0px;
+            margin-top: 0px;
+            color: #8c8c8c;
+        }
+
+        .social-media-icons {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            margin-top: 12px !important;
+        }
+
+        .social-media-icons>a {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .navbar>a {
+            float: left;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            border-radius: 100px;
+        }
+
+        .navbar a.active {
+            background-color: #ddd;
+            color: black;
+            border-radius: 100px;
+        }
+
+        .about {
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            color: #8c8c8c;
+            font-size: 15px;
+        }
+
+        .address {
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            color: #8c8c8c;
+            font-size: 18px;
+        }
+
+        .about-txt {
+            font-size: 15px;
+            margin-bottom: 0px !important;
+        }
+
+        .address-txt {
+            font-size: 14px;
+            margin-bottom: 0px !important;
+        }
+
+        .social-media-icon {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 9px;
+        }
+
+        .nav-bar-icon {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .user-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .slide-up {
+            animation: slideup 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .slide-down {
+            animation: slidedown 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .border-up {
+            animation: borderup 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .border-down {
+            animation: borderdown 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes slideup {
+            from {
+                height: 170px;
+            }
+
+            to {
+                height: 0px;
+            }
+        }
+
+        @keyframes slidedown {
+            from {
+                height: 0px;
+            }
+
+            to {
+                height: 170px;
+            }
+        }
+
+        @keyframes borderup {
+            from {
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+
+            to {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+        }
+
+        @keyframes borderdown {
+            from {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            to {
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+
+        .hidden {
+            display: none !important;
+        }
+
+        .user {
+            height: 300px;
+        }
+
+        .fadein {
+            -moz-animation-name: fadeIn;
+            -webkit-animation-name: fadeIn;
+            -ms-animation-name: fadeIn;
+            animation-name: fadeIn;
+            -moz-animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            -ms-animation-duration: 1s;
+            animation-duration: 1s;
+            -moz-animation-timing-function: ease-in-out;
+            -webkit-animation-timing-function: ease-in-out;
+            -ms-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -moz-animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+            -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+        }
+
+
+
+        @-moz-keyframes fadeIn {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @-ms-keyframes fadeIn {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .user-btns:hover{
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+    <div class="main-container">
+        <div class="card shadow-lg border-0 " style="width: 18rem;">
+            <div class="img">
+                <img src="https://source.unsplash.com/random" class="card-img-top">
+            </div>
+            <div class="card-body-content  container">
+                <div class="card-body home fadein">
+                    <div class="d-flex justify-content-between">
+                        <img src="https://source.unsplash.com/random" class="rounded-circle" alt="Cinque Terre"
+                            width="70" height="70">
+                        <div class="mr-3  mt-2">
+                            <h5 class="title">Ronak Pareek</h5>
+                            <p class="designation">Software Developer</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="about">About</p>
+                        <p class="about-txt">Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>
+                        <div class="social-media-icons mt-4 justify-content-between">
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon"
+                                    src="telephone.png"></a>
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon" src="email.png"></a>
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon"
+                                    src="world-globe.png"></a>
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon"
+                                    src="twitter.png"></a>
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon"
+                                    src="facebook.png"></a>
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon"
+                                    src="instagram.png"></a>
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon"
+                                    src="linkedin.png"></a>
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon"
+                                    src="whatsapp.png"></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body user fadein hidden">
+                    <div class="mt-lg-2">
+                        <p class="address">Nucleus Solution</p>
+                        <p class="address-txt pt-2">A-402, Abhishek Aptartment, Indravan Complex, Next to Dada Dadi Park, Dutt Mandir Road, Malad-(East), Mumbai - 400097.</p>
+                    </div>
+                    <div class=" d-flex  flex-wrap">
+                        
+                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon" src="pdf.png">PDF's</a>
+                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon" src="businessman.png">About Us</a>
+                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon" src="money.png">Payment</a>
+                    </div>
+                </div>
+
+                <nav class="navbar">
+                    <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="save.png"></a>
+                    <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="share.png"></a>
+                    <a class="nav-link nav-bar-home" href="#"><img href="#" class="nav-bar-icon" src="home.png"></a>
+                    <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="image.png"></a>
+                    <a class="nav-link nav-bar-user" href="#"><img href="#" class="nav-bar-icon " src="user.png"></a>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".nav-bar-user").click(function () {
+                toggleActive("nav-bar-user");
+            });
+            $(".nav-bar-home").click(function () {
+                toggleActive("nav-bar-home");
+            });
+
+            function toggleActive(typeName) {
+                switch (typeName) {
+                    case "nav-bar-user":
+                        $(".nav-bar-user").addClass("active");
+                        $(".nav-bar-home").removeClass("active");
+                        $(".user").removeClass("hidden");
+                        $(".home").addClass("hidden");
+                        $(".img").removeClass("slide-down");
+                        $(".card-body-content").removeClass("border-down");
+                        $(".card-body-content").addClass("border-up");
+                        $(".img").addClass("slide-up");
+                        break;
+                    case "nav-bar-home":
+                        $(".nav-bar-home").addClass("active");
+                        $(".nav-bar-user").removeClass("active");
+                        $(".user").addClass("hidden");
+                        $(".home").removeClass("hidden");
+                        $(".img").removeClass("slide-up");
+                        $(".card-body-content").addClass("border-down");
+                        $(".card-body-content").removeClass("border-up");
+                        $(".img").addClass("slide-down");
+                        break;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
