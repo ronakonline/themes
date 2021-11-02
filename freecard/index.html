@@ -14,18 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
     <title>Title</title>
 </head>
-<!-- about font small 2 lines only tooltip
-icons 8 and filled
-mobile,whatsapp,email,website,instagram,facebook,twitter,linkedin
-save,share bottom icons
-
--->
-
 <body>
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
-            overflow-x: hidden;
+           
         }
 
         .main-container {
@@ -270,9 +263,7 @@ save,share bottom icons
             display: none !important;
         }
 
-        .user {
-            height: 300px;
-        }
+        
 
         .fadein {
             -moz-animation-name: fadeIn;
@@ -419,15 +410,36 @@ save,share bottom icons
         }
 
         ::-webkit-scrollbar {
-            width: 0;
+            width: 50;
             /* Remove scrollbar space */
             background: transparent;
             /* Optional: just make scrollbar invisible */
         }
 
-        /* Optional: show position indicator in red */
-        ::-webkit-scrollbar-thumb {
-            background: #FF0000;
+        .gallery-images-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-images{
+            display: flex;
+            overflow-x: auto;
+        }
+        
+
+        .gallery-image{
+            width: 100px;
+            height: 100px;
+            object-fit: fill;
+            margin-right: 15px;
+        }
+        .gallery-image > img{
+            width: 100px;
+            height: 100px;
+            object-fit: fill;
         }
     </style>
     <div class="main-container">
@@ -492,19 +504,39 @@ save,share bottom icons
                     </div>
                 </div>
                 <div class="card-body user fadein hidden">
-                    <div class="mt-lg-2">
-                        <p class="address">Nucleus Solution</p>
-                        <p class="address-txt pt-2">A-402, Abhishek Aptartment, Indravan Complex, Next to Dada Dadi
-                            Park, Dutt Mandir Road, Malad-(East), Mumbai - 400097.</p>
+                    <div class="gallery-images-container">
+                        <span class="designation float-left pb-2">Images</span>
+                        <div class="gallery-images ">
+                            <div class="gallery-image ">
+                                <img src="https://source.unsplash.com/random" class="rounded-lg">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="https://source.unsplash.com/random" class="rounded-lg">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="https://source.unsplash.com/random" class="rounded-lg">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="https://source.unsplash.com/random" class="rounded-lg">
+                            </div>
+                        </div>
                     </div>
-                    <div class=" d-flex  flex-wrap">
-
-                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
-                                src="icons/pdf.png">PDF's</a>
-                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
-                                src="icons/businessman.png">About Us</a>
-                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
-                                src="icons/money.png">Payment</a>
+                    <div class="gallery-images-container">
+                        <span class="designation float-left pb-2">Videos</span>
+                        <div class="gallery-images ">
+                            <div class="gallery-image ">
+                                <img src="https://source.unsplash.com/random" class="rounded-lg">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="https://source.unsplash.com/random" class="rounded-lg">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="https://source.unsplash.com/random" class="rounded-lg">
+                            </div>
+                            <div class="gallery-image">
+                                <img src="https://source.unsplash.com/random" class="rounded-lg">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -513,9 +545,9 @@ save,share bottom icons
                     <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="icons/share.png"></a>
                     <a class="nav-link nav-bar-home" href="#"><img href="#" class="nav-bar-icon"
                             src="icons/home.png"></a>
-                    <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="icons/image.png"></a>
+                    <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="icons/user.png"></a>
                     <a class="nav-link nav-bar-user" href="#"><img href="#" class="nav-bar-icon "
-                            src="icons/user.png"></a>
+                            src="icons/image.png"></a>
 
                 </nav>
             </div>
