@@ -31,50 +31,138 @@
 
         }
 
-        .img>.background-img {
+        /* .img>.background-img {
             height: 210px;
             width: 100%;
             border-radius: 15px 15px 0px 0px;
+        } */
+
+
+        .menu>.menu-item>.active {
+            border-bottom: 2px solid var(--primary);
         }
 
+        .slide-top {
+            animation: slide-top 2s cubic-bezier(.47, 0.000, .745, .715) forwards
+        }
+
+        @keyframes slide-top {
+            0% {
+                transform: translateY(0)
+            }
+
+            100% {
+                transform: translateY(-100px)
+            }
+        }
+
+        .slide-bottom {
+            animation: slide-bottom 2s forwards
+        }
+
+        @keyframes slide-bottom {
+            0% {
+                transform: translateY(-100px)
+            }
+
+            100% {
+                transform: translateY(0px)
+            }
+        }
+
+        .fade-out {
+            animation: fade-out 3s ease-out both
+        }
+
+        @keyframes fade-out {
+            0% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        .fade-in {
+            animation: fade-in 3s cubic-bezier(.39, .575, .565, 1.000) both
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
     </style>
     <div
         class="box bg-rgb(232,232,233) relative rounded-b-2xl flex flex-col w-full  card mx-auto mt-8 shadow-2xl rounded-2xl h-80">
         <div class="relative img">
             <img src="https://source.unsplash.com/random"
                 class="h-full background-img w-full rounded-t-2xl object-cover object-center">
-            <div class="absolute w-full pt-2.5 bottom-0 flex justify-between px-5">
-                <div class="text-white text-sm "><a href="#" class="border-green-500 border-b-2 ">Home</a></div>
-                <div class="text-white text-sm "><a href="#">Products</a></div>
-                <div class="text-white text-sm "><a href="#">Profile</a></div>
+            <div class="absolute w-full pt-2.5 bottom-0 flex justify-between px-5 menu mb-2">
+                <div class="text-white text-sm menu-item menu-item-home"><a href="#" class="active">Home</a></div>
+                <div class="text-white text-sm menu-item menu-item-products"><a href="#">Products</a></div>
+                <div class="text-white text-sm menu-item menu-item-profile"><a href="#">Profile</a></div>
             </div>
-            <a href="#"><img src="/icons/save.png" class="w-6 h-6 absolute float-right top-1 right-3 ">
-            </a>
+            <!-- <a href="#"><img src="/icons/save.png" class="w-6 h-6 absolute float-right top-1 right-3 ">
+            </a> -->
 
         </div>
-        <div class="mx-1 bg-white shadow-md h-full w-auto rounded-t-md rounded-b-2xl p-4">
-            <div class="flex flex-column ">
-                <div class="flex-1 pt-3">
-                    <p class="text-lg font-bold">Ronak Pareek</p>
-                    <p class="text-sm text-gray-500">Software Developer</p>
+        <div class="mx-1 bg-white shadow-md w-auto h-full rounded-t-md rounded-b-2xl p-4 content-screen">
+            <div class="home-screen">
+                <div class="flex flex-column ">
+                    <div class="flex-1 pt-3">
+                        <p class="text-lg font-bold">Ronak Pareek</p>
+                        <p class="text-sm text-gray-500">Software Developer</p>
+                    </div>
+                    <img src="https://source.unsplash.com/random" class="rounded-full w-20 h-20 object-fit">
                 </div>
-                <img src="https://source.unsplash.com/random" class="rounded-full w-20 h-20 object-fit">
+                <div class="">
+                    <p class="text-gray-600 text-sm">About</p>
+                    <p class="text-sm overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+                        officiis? Magnam deserunt, </p>
+                </div>
+                <div class="flex flex-column flex-wrap justify-between pt-2">
+                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1"
+                            src="/icons/telephone.png"></a>
+                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1" src="/icons/email.png"></a>
+                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1"
+                            src="/icons/planet-earth.png"></a>
+                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1"
+                            src="/icons/twitter.png"></a>
+                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
+                            src="/icons/facebook.png"></a>
+                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
+                            src="/icons/instagram.png"></a>
+                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
+                            src="/icons/linkedin.png"></a>
+                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
+                            src="/icons/whatsapp.png"></a>
+                </div>
             </div>
-            <div class="">
-                <p class="text-gray-600 text-sm">About</p>
-                <p class="text-sm overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                    officiis? Magnam deserunt, </p>
-            </div>
-            <div class="flex flex-column flex-wrap justify-between pt-2">
-                <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1" src="/icons/telephone.png"></a>
-                <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1" src="/icons/email.png"></a>
-                <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1"
-                        src="/icons/planet-earth.png"></a>
-                <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1" src="/icons/twitter.png"></a>
-                <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2" src="/icons/facebook.png"></a>
-                <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2" src="/icons/instagram.png"></a>
-                <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2" src="/icons/linkedin.png"></a>
-                <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2" src="/icons/whatsapp.png"></a>
+            <div class="profile-screen hidden">
+                <div class="flex flex-col">
+                    <div class="address-section">
+                        <p class="text-bold text-gray-600 text-sm-left">Nucleus Solution</p>
+                        <p class="pt-2 text-sm">A-402, Abhishek Aptartment, Indravan Complex, Next to Dada Dadi Park,
+                            Dutt Mandir Road, Malad-(East), Mumbai - 400097.</p>
+                    </div>
+                    <div class="flex flex-row flex-wrap justify-between mt-2">
+                        <a href="#"
+                            class=" flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
+                                class="w-5 h-5 mr-2" src="/icons/businessman.png">About Us</a>
+                        <a href="#"
+                            class="flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
+                                class="w-5 h-5 mr-2" src="/icons/money.png">Payment</a>
+                        <a href="#"
+                            class="flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
+                                class="w-5 h-5 mr-2" src="/icons/pdf.png">PDF's</a>
+                    </div>
+                </div>
             </div>
         </div>
         <button
@@ -86,5 +174,36 @@
         </button>
     </div>
 </body>
+
+<script src="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.menu-item').click(function () {
+            $('.menu-item').find('a').removeClass('active');
+            $(this).find('a').addClass('active');
+        });
+
+        $('.menu-item-profile').click(function () {
+            $('.content-screen').removeClass('slide-bottom');
+            $('.menu').removeClass('slide-bottom');
+            $('.content-screen').addClass('slide-top');
+            $('.menu').addClass('slide-top');
+            $('.home-screen').addClass('fade-out');
+            $('.home-screen').addClass('hidden');
+            $('.profile-screen').removeClass('hidden');
+            $('.profile-screen').addClass('fade-in');
+        });
+
+        $('.menu-item-home').click(function () {
+            $('.content-screen').addClass('slide-bottom');
+            $('.menu').addClass('slide-bottom');
+            $('.home-screen').removeClass('hidden');
+            $('.profile-screen').addClass('hidden');
+            $('.home-screen').addClass('fade-in');
+
+        });
+    });
+</script>
 
 </html>
