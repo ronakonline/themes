@@ -23,7 +23,7 @@ save,share bottom icons
 
 <body>
     <style>
-        body{
+        body {
             font-family: 'Open Sans', sans-serif;
         }
 
@@ -45,25 +45,13 @@ save,share bottom icons
             position: relative;
         }
 
-        @media screen and (max-width: 600px) {
-            .card {
-                min-width: 320px;
-                max-width: 350px;
-                min-height: 90%;
-                border-radius: 15px;
-                position: relative;
-            }
-
-            .main-container{
-                padding-top: 20px;
-                padding-bottom: 10px;
-            }
-
-            .social-media-icon{
-                margin-right: 5px;
-            }
+        .profile-img {
+            height: 70px;
+            width: 70px;
         }
-            
+
+      
+
 
         .img {
             width: 100%;
@@ -82,6 +70,7 @@ save,share bottom icons
         .card-body-content {
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
+            min-height: 300px;
         }
 
         .title {
@@ -212,7 +201,7 @@ save,share bottom icons
             }
 
             to {
-                height: 0px;
+                height: 10px;
             }
         }
 
@@ -338,9 +327,48 @@ save,share bottom icons
             }
         }
 
-        .user-btns:hover{
+        .user-btns:hover {
             background-color: #ddd;
             color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            .card {
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 100%;
+                position: relative;
+            }
+
+            .home {
+                min-height: 350px;
+            }
+
+            .profile-img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .main-container {
+                padding-top: 0px;
+                padding-bottom: 10px;
+            }
+
+            .social-media-icon {
+                margin-right: 5px;
+            }
+
+            .img {
+                width: 100%;
+                height: 170px;
+                object-fit: fill;
+                border-radius: 0px 0px 0px 0px !important;
+            }
+
+            .img>img{
+                border-radius: 0px 0px 0px 0px !important;
+            }
+           
         }
     </style>
     <div class="main-container">
@@ -348,23 +376,26 @@ save,share bottom icons
             <div class="img">
                 <img src="https://source.unsplash.com/random" class="card-img-top">
             </div>
-            <div class="card-body-content  container">
-                <div class="card-body home fadein">
+            <div class="card-body-content d-flex flex-column  container">
+                <div class="card-body d-flex flex-column justify-content-between home fadein">
                     <div class="d-flex justify-content-between">
-                        <img src="https://source.unsplash.com/random" class="rounded-circle" alt="Cinque Terre"
-                            width="70" height="70">
+                        <img src="https://source.unsplash.com/random" class="rounded-circle profile-img"
+                            alt="Cinque Terre">
                         <div class="mr-3  mt-2">
                             <h5 class="title">Ronak Pareek</h5>
                             <p class="designation">Software Developer</p>
                         </div>
                     </div>
-                    <div class="mt-4">
+                    <div class="">
                         <p class="about">About</p>
                         <p class="about-txt">Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>
+                    </div>
+                    <div>
                         <div class="social-media-icons mt-4 justify-content-between">
                             <a href="#" class="social-icon"><img href="#" class="social-media-icon"
                                     src="icons/telephone.png"></a>
-                            <a href="#" class="social-icon"><img href="#" class="social-media-icon" src="icons/email.png"></a>
+                            <a href="#" class="social-icon"><img href="#" class="social-media-icon"
+                                    src="icons/email.png"></a>
                             <a href="#" class="social-icon"><img href="#" class="social-media-icon"
                                     src="icons/world-globe.png"></a>
                             <a href="#" class="social-icon"><img href="#" class="social-media-icon"
@@ -384,22 +415,28 @@ save,share bottom icons
                 <div class="card-body user fadein hidden">
                     <div class="mt-lg-2">
                         <p class="address">Nucleus Solution</p>
-                        <p class="address-txt pt-2">A-402, Abhishek Aptartment, Indravan Complex, Next to Dada Dadi Park, Dutt Mandir Road, Malad-(East), Mumbai - 400097.</p>
+                        <p class="address-txt pt-2">A-402, Abhishek Aptartment, Indravan Complex, Next to Dada Dadi
+                            Park, Dutt Mandir Road, Malad-(East), Mumbai - 400097.</p>
                     </div>
                     <div class=" d-flex  flex-wrap">
-                        
-                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon" src="icons/pdf.png">PDF's</a>
-                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon" src="icons/businessman.png">About Us</a>
-                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon" src="icons/money.png">Payment</a>
+
+                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
+                                src="icons/pdf.png">PDF's</a>
+                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
+                                src="icons/businessman.png">About Us</a>
+                        <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
+                                src="icons/money.png">Payment</a>
                     </div>
                 </div>
 
                 <nav class="navbar">
                     <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="icons/save.png"></a>
                     <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="icons/share.png"></a>
-                    <a class="nav-link nav-bar-home" href="#"><img href="#" class="nav-bar-icon" src="icons/home.png"></a>
+                    <a class="nav-link nav-bar-home" href="#"><img href="#" class="nav-bar-icon"
+                            src="icons/home.png"></a>
                     <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="icons/image.png"></a>
-                    <a class="nav-link nav-bar-user" href="#"><img href="#" class="nav-bar-icon " src="icons/user.png"></a>
+                    <a class="nav-link nav-bar-user" href="#"><img href="#" class="nav-bar-icon "
+                            src="icons/user.png"></a>
 
                 </nav>
             </div>
