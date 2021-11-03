@@ -485,6 +485,7 @@
             bottom: 0px;
             right: 0px;
             margin:0px;
+            border-radius: 10px 0px 0px 0px;
         }
 
         .navbar-1 {
@@ -508,6 +509,7 @@
                 min-width: 100%;
                 max-width: 100%;
                 min-height: 100vh;
+                max-height: 100vh;
                 position: relative;
             }
 
@@ -689,10 +691,10 @@
                         </div>  
 
                         <div class=" d-flex  flex-wrap justify-content-center mb-3">
-                            <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
-                                    src="icons/businessman.png">About Us</a>
-                            <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
-                                    src="icons/money.png">Payment</a>
+                            <button class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
+                                    src="icons/businessman.png">About Us</button>
+                            <button  class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
+                                    src="icons/money.png">Payment</button>
                         </div>
                     </div>
                 </div>
@@ -732,7 +734,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body products fadein hidden ">
+                <div class="card-body products fadein hidden  ">
+                    <p class="about mb-3 ml-0" >Products</p>
                     <div class="row">
                         <div class="col-6">
                             <div class="product-card">
