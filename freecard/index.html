@@ -138,7 +138,15 @@
             background-color: #ddd;
             color: black;
             border-radius: 100px;
+        
         }
+
+        .navbar a.active >img {
+          
+            width: 25px;
+            height: 25px;
+        }
+
 
         .about {
             padding-bottom: 0px;
@@ -495,6 +503,23 @@
                 justify-content: start;
             }
         }
+        .list-icon{
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            margin-bottom: 4px;
+        }
+
+        .products > .row > .col-6{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .products{
+            align-items: center;
+        }
+
+       
     </style>
     <div class="main-container">
         <div class="card shadow-lg border-0 " style="width: 18rem;">
@@ -511,11 +536,13 @@
                             <p class="designation">Software Developer</p>
                         </div>
                     </div>
-                    <div class="mt-2">
-                        <p class="about">About</p>
-                        <p class="about-txt">Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>
+                    <div class="mt-4">
+                        <p class="about" style="border-left: 10px solid blueviolet; padding-left: 8px;">About</p>
+                        <p class="about-txt py-2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>
                     </div>
-                    <div>
+                    
+                    <div class="mt-3">
+                        <p class="about" style="border-left: 10px solid blueviolet; padding-left: 8px;">Contact Me</p>
                         <div class="social-media-icons d-flex flex-column justify-center align-items-center ">
                             <div class="d-flex flex-row ">
                                 <a href="#" class="social-icon"><img href="#" class="social-media-icon "
@@ -540,16 +567,45 @@
 
                         </div>
                     </div>
-                    <div class=" home-2">
+                    
+                    <div class="mt-3 home-2">
                         <div class="mt-lg-2">
-                            <p class="address">Nucleus Solution</p>
+                            <p class="about" style="border-left: 10px solid blueviolet; padding-left: 8px;">Nucleus Solution</p>
                             <p class="address-txt pt-2">A-402, Abhishek Aptartment, Indravan Complex, Next to Dada Dadi
                                 Park, Dutt Mandir Road, Malad-(East), Mumbai - 400097.</p>
                         </div>
-                        <div class=" d-flex  flex-wrap">
 
-                            <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
-                                    src="icons/pdf.png">PDF's</a>
+                        <div class="mt-lg-2 mt-4">
+                            <p class="about" style="border-left: 10px solid blueviolet; padding-left: 8px;">Catelogs</p>
+                            <ul class="" style="list-style-type:none">
+                                <li class="pt-1 mt-3">
+                                    <img src="icons/pdf.png" class="list-icon">
+                                    <a href="#" class="text-dark">
+                                        <span class="text-dark">Nucleus Solution</span>
+                                    </a>
+                                </li>
+                                <li class="pt-1">
+                                    <img src="icons/pdf.png" class="list-icon">
+                                    <a href="#" class="text-dark">
+                                        <span class="text-dark">Nucleus Solution</span>
+                                    </a>
+                                </li>
+                                <li class="pt-1">
+                                    <img src="icons/pdf.png" class="list-icon">
+                                    <a href="#" class="text-dark">
+                                        <span class="text-dark">Nucleus Solution</span>
+                                    </a>
+                                </li>
+                                <li class="pt-1">
+                                    <img src="icons/pdf.png" class="list-icon">
+                                    <a href="#" class="text-dark">
+                                        <span class="text-dark">Nucleus Solution</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-3 d-flex  flex-wrap justify-content-center">
                             <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
                                     src="icons/businessman.png">About Us</a>
                             <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
@@ -692,6 +748,7 @@
             function toggleActive(typeName) {
                 switch (typeName) {
                     case "nav-bar-user":
+                        
                         $(".nav-bar-user").addClass("active");
                         $(".nav-bar-home").removeClass("active");
                         $(".nav-bar-products").removeClass("active");
