@@ -85,7 +85,7 @@
 
         .card-body-content {
             min-height: 300px;
-            border-radius: 50px 50px 15px 15px;
+            border-radius: 50px 50px 0px 0px;
             
             background-color: var(--card-background);
         }
@@ -164,6 +164,7 @@
             margin-bottom: 0px;
             color: black;
             font-size: 15px;
+            font-weight: bold;
             border-radius: 4px;
             border-left: 10px solid var(--text-side);
             padding-left: 8px;
@@ -450,9 +451,15 @@
             margin-bottom: 10px;
         }
 
-        .product-card>img {
-            width: 100%;
+        .product-image{
             height: 60%;
+            width: 100%;
+            position: relative;
+        }
+
+        .product-image > img {
+            width: 100%;
+            height: 100%;
             object-fit: fit;
             border-radius: 10px 10px 0px 0px;
         }
@@ -470,7 +477,14 @@
 
         .product-price {
             font-size: 12px;
-            color: var(--heading-txt-color)
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            background-color: rgba(14, 13, 13, 0.3);
+            padding:5px;
+            bottom: 0px;
+            right: 0px;
+            margin:0px;
         }
 
         .navbar-1 {
@@ -493,7 +507,7 @@
             .card {
                 min-width: 100%;
                 max-width: 100%;
-                min-height: 95vh;
+                min-height: 100vh;
                 position: relative;
             }
 
@@ -674,7 +688,7 @@
                             <p class="about"  >Other</p>
                         </div>  
 
-                        <div class=" d-flex  flex-wrap justify-content-center">
+                        <div class=" d-flex  flex-wrap justify-content-center mb-3">
                             <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
                                     src="icons/businessman.png">About Us</a>
                             <a href="#" class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
@@ -718,63 +732,206 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body products fadein hidden">
+                <div class="card-body products fadein hidden ">
                     <div class="row">
                         <div class="col-6">
                             <div class="product-card">
-                                <img src="https://source.unsplash.com/random" class="card-img-top">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
                                 <div class="product-card-body">
                                     <p class="product-title">Samsung Galaxy S9</p>
-                                    <p class="product-price">Rs 500</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="product-card">
-                                <img src="https://source.unsplash.com/random" class="card-img-top">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
                                 <div class="product-card-body">
                                     <p class="product-title">Samsung Galaxy S9</p>
-                                    <p class="product-price">Rs 500</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="product-card">
-                                <img src="https://source.unsplash.com/random" class="card-img-top">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
                                 <div class="product-card-body">
                                     <p class="product-title">Samsung Galaxy S9</p>
-                                    <p class="product-price">Rs 500</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="product-card">
-                                <img src="https://source.unsplash.com/random" class="card-img-top">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
                                 <div class="product-card-body">
                                     <p class="product-title">Samsung Galaxy S9</p>
-                                    <p class="product-price">Rs 500</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="product-card">
-                                <img src="https://source.unsplash.com/random" class="card-img-top">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
                                 <div class="product-card-body">
                                     <p class="product-title">Samsung Galaxy S9</p>
-                                    <p class="product-price">Rs 500</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="product-card">
-                                <img src="https://source.unsplash.com/random" class="card-img-top">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
                                 <div class="product-card-body">
                                     <p class="product-title">Samsung Galaxy S9</p>
-                                    <p class="product-price">Rs 500</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <p class="product-price">₹ 500</p>
+                                    <img src="https://source.unsplash.com/random" class="card-img-top">
+                                </div>
+                                <div class="product-card-body">
+                                    <p class="product-title">Samsung Galaxy S9</p>
+                                    <span class="badge badge-pill badge-primary">Enquiry</span>
+                                    <span class="badge badge-pill badge-success"><i class="fab fa-whatsapp"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                    
                 </div>
 
                 <nav class="navbar ">
@@ -841,6 +998,7 @@
                         $(".img").addClass("slide-up");
                         break;
                     case "nav-bar-home":
+                        
                         $(".nav-bar-home").addClass("active");
                         $(".nav-bar-user").removeClass("active");
                         $(".nav-bar-products").removeClass("active");
@@ -852,6 +1010,7 @@
                         $(".card-body-content").removeClass("border-up");
                         $(".img").addClass("slide-down");
                         $(".home").css("min-height", "42vh");
+                        $(".home").scrollTop(10);
                         break;
                     case "nav-bar-products":
                         $(".nav-bar-products").addClass("active");
