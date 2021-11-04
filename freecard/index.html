@@ -493,6 +493,7 @@
             height: 100%;
             object-fit: fit;
             border-radius: 10px 10px 0px 0px;
+            cursor: pointer;
         }
 
         .product-card-body {
@@ -505,6 +506,7 @@
             font-size: 13px;
             font-weight: 500;
             margin: 0px;
+            cursor: pointer;
         }
 
         .product-price {
@@ -525,6 +527,7 @@
             color: white;
             border: none;
             border-radius: 10px !important;
+            cursor: pointer;
 
         }
 
@@ -532,6 +535,7 @@
             color: white;
             border: none;
             border-radius: 10px !important;
+            cursor: pointer;
 
         }
 
@@ -676,6 +680,21 @@
 
         .products {
             align-items: center;
+        }
+
+        .back-btn {
+            border: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .back-btn>img {
+            top: 0px;
+            left: 0px;
+            width: 25px;
+            height: 25px;
+            z-index: 1;
+            margin-bottom: 15px;
         }
 
         ::-webkit-scrollbar {
@@ -854,7 +873,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -870,7 +889,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -886,7 +905,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -902,7 +921,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -918,7 +937,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -934,7 +953,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -950,7 +969,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -966,7 +985,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -982,7 +1001,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -998,7 +1017,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -1014,7 +1033,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -1030,7 +1049,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -1046,7 +1065,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -1062,7 +1081,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -1078,7 +1097,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -1094,7 +1113,7 @@
                                     <div class="product-btns d-flex justify-content-between">
                                         <span class="badge badge-pill badge-success"><i
                                                 class="fab fa-whatsapp"></i></span>
-                                        <span class="badge badge-pill product-enquiry-btn">Enquiry</span>
+                                        <span class="badge badge-pill product-enquiry-btn" data-toggle="modal" data-target="#myModal">Enquiry</span>
                                     </div>
                                 </div>
                             </div>
@@ -1104,6 +1123,7 @@
 
                 </div>
                 <div class="card-body product fadein hidden  ">
+                    <button class="back-btn"><img src="icons/back-button.png"></button>
                     <div class="row">
                         <div class="col-12">
                             <div class="swiper mySwiper1">
@@ -1138,14 +1158,14 @@
                                 <div class="d-flex mb-3 mt-3">
                                     <button
                                         class="btn flex-fill btn-md product-whatsapp-btn  btn-success flex-1  mr-3">Whatsapp</button>
-                                    <button class="btn flex-fill btn-md  flex-1 product-enquiry-btn ">Enquiry</button>
+                                    <button class="btn flex-fill btn-md  flex-1 product-enquiry-btn "
+                                        data-toggle="modal" data-target="#myModal">Enquiry</button>
                                 </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <nav class="navbar ">
@@ -1168,6 +1188,56 @@
                 <a class="nav-link nav-bar-user" href="#"><img href="#" class="nav-bar-icon " src="icons/image.png"></a>
 
             </nav>
+
+            <div class="modal fade left" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 id="myModalLabel">We'd Love to Hear From You</h6>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+
+                            <form class="form-horizontal" role="form" method="post" action="form_to_email_script.php ">
+                                <div class="form-group">
+                                    <label for="name" class="col control-label">
+                                        <span class="required"></span> Contact Number:</label>
+                                    <div class="col">
+                                        <input type="text" class="form-control" id="phonenumber" name="mob"
+                                            placeholder="+91 8888888888" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col control-label">
+                                        <span class="required"></span> Email: </label>
+                                    <div class="col">
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="you@domain.com" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message" class="col control-label">
+                                        <span class="required"></span> Message:</label>
+                                    <div class="col">
+                                        <textarea name="message" rows="4" required class="form-control" id="message"
+                                            placeholder="Comments"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
+                                        <button type="submit" id="submit" name="submit"
+                                            class="btn btn-primary">SUBMIT</button>
+                                    </div>
+                                </div>
+                                <!--end Form-->
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     </div>
@@ -1194,9 +1264,17 @@
                 }, 500);
 
             });
-            $(".product-card").click(function () {
+            $(".product-image").click(function () {
                 $(".products").addClass("hidden");
                 $(".product").removeClass("hidden");
+            });
+            $(".product-title").click(function () {
+                $(".products").addClass("hidden");
+                $(".product").removeClass("hidden");
+            });
+            $(".back-btn").click(function () {
+                $(".product").addClass("hidden");
+                $(".products").removeClass("hidden");
             });
 
             function hideallpages() {
