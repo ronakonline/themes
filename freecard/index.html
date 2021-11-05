@@ -602,6 +602,10 @@
             border-top-right-radius: 15px;
         }
 
+        .empty-space{
+            display: none;
+        }
+
 
         @media screen and (max-width: 600px) {
             .card {
@@ -612,10 +616,7 @@
                 position: relative;
             }
 
-            /* .home {
-                min-height: 50vh;
-                max-height: 50vh;
-            } */
+          
 
             /* .products {
                 min-height: 85vh;
@@ -669,6 +670,10 @@
 
             .navbar-1 {
                 visibility: visible !important;
+            }
+
+            .empty-space{
+                display: block;
             }
         }
 
@@ -822,6 +827,9 @@
                                     src="icons/businessman.png">About Us</button>
                             <button class="btn btn-outline-dark user-btns mt-3 mr-2"><img class="user-icon"
                                     src="icons/money.png">Payment</button>
+                        </div>
+                        <div class=" d-flex  flex-wrap justify-content-center mb-3 empty-space">
+                                <br>
                         </div>
                     </div>
                 </div>
