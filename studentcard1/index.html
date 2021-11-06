@@ -8,6 +8,9 @@
     <title>Document</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -16,11 +19,14 @@
             font-family: 'Open Sans', sans-serif;
             --primary: #00B563;
             --background: #E8E8E9;
+            overflow: hidden;
         }
 
         .card {
             max-width: 300px;
             min-height: 520px;
+            max-height: 520px;
+            overflow: hidden;
         }
 
         .img {
@@ -31,16 +37,174 @@
 
         }
 
-        /* .img>.background-img {
-            height: 210px;
-            width: 100%;
-            border-radius: 15px 15px 0px 0px;
-        } */
+        .menu-item {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
 
 
         .menu>.menu-item>.active {
             border-bottom: 2px solid var(--primary);
         }
+
+
+        .title {
+            font-weight: bold;
+
+        }
+
+
+        .title::after {
+            content: "";
+            display: block;
+            margin: 0;
+            width: 20%;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        
+
+        .title1::after {
+            content: "";
+            display: block;
+            margin: 0;
+            width: 100%;
+            border-bottom: 2px solid var(--primary);
+        }
+
+
+        .navbar {
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 15px;
+            padding-top: 0px;
+            padding-bottom: 4px;
+        }
+
+        .navbar>a {
+            float: left;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: var(--navbar-btn-hover);
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: var(--navbar-btn-hover);
+            color: black;
+
+        }
+
+        .navbar a>img {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .nav-bar-icon {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .home-screen {
+            height: 245px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        .profile-screen {
+            /* height: 245px; */
+           
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .home-screen {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .gallery-images-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* .gallery-images {
+            display: flex;
+            overflow-x: auto;
+        } */
+
+
+        .gallery-image {
+            width: 100px;
+            height: 100px;
+            object-fit: fill;
+            margin-right: 15px;
+        }
+
+        .gallery-image>img {
+            width: 100px;
+            height: 100px;
+            object-fit: fill;
+        }
+
+        .gallery-video {
+            width: 180px;
+            height: 100px;
+            object-fit: fill;
+            margin-right: 15px;
+            position: relative;
+        }
+
+        .video-play-icon {
+            position: absolute;
+            width: 30px !important;
+            height: 30px !important;
+            background-color: var(--btn-color);
+            cursor: pointer;
+        }
+
+        .gallery-video>img {
+            width: 180px;
+            height: 100px;
+            object-fit: fill;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
 
         .slide-top {
             animation: slide-top 2s cubic-bezier(.47, 0.000, .745, .715) forwards
@@ -99,14 +263,14 @@
         }
     </style>
     <div
-        class="box bg-rgb(232,232,233) relative rounded-b-2xl flex flex-col w-full card mx-auto lg:mt-8 mt-4 shadow-2xl rounded-2xl ">
+        class="box bg-rgb(232,232,233) card relative rounded-b-2xl flex flex-col w-full card mx-auto lg:mt-8 mt-4 shadow-2xl rounded-2xl ">
         <div class="relative img">
             <img src="https://picsum.photos/600"
                 class="h-full background-img w-full rounded-t-2xl object-cover object-center">
             <div class="absolute w-full pt-2.5 bottom-0 flex justify-between px-5 menu mb-2">
                 <div class="text-white text-sm menu-item menu-item-home"><a href="#" class="active">Home</a></div>
                 <div class="text-white text-sm menu-item menu-item-products"><a href="#">Products</a></div>
-                <div class="text-white text-sm menu-item menu-item-profile"><a href="#">Profile</a></div>
+                <div class="text-white text-sm menu-item menu-item-profile"><a href="#">Gallery</a></div>
             </div>
             <!-- <a href="#"><img src="/icons/save.png" class="w-6 h-6 absolute float-right top-1 right-3 ">
             </a> -->
@@ -122,59 +286,125 @@
                     <img src="https://picsum.photos/600?random=2" class="rounded-full w-20 h-20 object-fit">
                 </div>
                 <div class="">
-                    <p class="text-gray-600 text-sm">About</p>
+                    <p class="text-gray-600 text-sm title">About</p>
                     <p class="text-sm overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
                         officiis? Magnam deserunt, </p>
                 </div>
-                <div class="flex flex-column flex-wrap justify-between pt-2">
-                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1"
-                            src="/icons/telephone.png"></a>
-                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1" src="/icons/email.png"></a>
-                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1"
-                            src="/icons/planet-earth.png"></a>
-                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1"
-                            src="/icons/twitter.png"></a>
-                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
-                            src="/icons/facebook.png"></a>
-                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
-                            src="/icons/instagram.png"></a>
-                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
-                            src="/icons/linkedin.png"></a>
-                    <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
-                            src="/icons/whatsapp.png"></a>
+                <div class="mt-3">
+                    <p class="text-gray-600 text-sm title">Follow </p>
+                    <div class="flex flex-column flex-wrap justify-between pt-2">
+
+                        <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-1"
+                                src="/icons/twitter.png"></a>
+                        <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
+                                src="/icons/facebook.png"></a>
+                        <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
+                                src="/icons/instagram.png"></a>
+                        <a href="#" class="social-icon"><img href="#" class="h-8 w-8 mx-3 mt-2"
+                                src="/icons/linkedin.png"></a>
+                    </div>
                 </div>
+
+                <div class="address-section mt-3">
+                    <p class="text-bold text-gray-600 text-sm-left ">Nucleus Solution</p>
+                    <p class="pt-2 text-sm">A-402, Abhishek Aptartment, Indravan Complex, Next to Dada Dadi Park,
+                        Dutt Mandir Road, Malad-(East), Mumbai - 400097.</p>
+                </div>
+                <p class="text-gray-600 text-sm title mt-3">Catelogs</p>
+                <div class="flex flex-row flex-wrap justify-between mt-2">
+                    <a href="#"
+                        class=" flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
+                            class="w-5 h-5 mr-2" src="/icons/businessman.png">About Us</a>
+                    <a href="#"
+                        class="flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
+                            class="w-5 h-5 mr-2" src="/icons/money.png">Payment</a>
+                    <a href="#"
+                        class="flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
+                            class="w-5 h-5 mr-2" src="/icons/pdf.png">PDF's</a>
+                </div>
+
             </div>
             <div class="profile-screen hidden">
                 <div class="flex flex-col">
-                    <div class="address-section">
-                        <p class="text-bold text-gray-600 text-sm-left">Nucleus Solution</p>
-                        <p class="pt-2 text-sm">A-402, Abhishek Aptartment, Indravan Complex, Next to Dada Dadi Park,
-                            Dutt Mandir Road, Malad-(East), Mumbai - 400097.</p>
+                    <div class="gallery-images-container">
+                        <span class=" float-left title1  mb-3">Images</span>
+                        <div class="swiper mySwiper">
+                            <div class="gallery-images swiper-wrapper ">
+                                <div class="gallery-image swiper-slide ">
+                                    <img src="https://picsum.photos/600/600?random=1" class="rounded-lg">
+                                </div>
+                                <div class="gallery-image swiper-slide">
+                                    <img src="https://picsum.photos/600/600?random=2" class="rounded-lg">
+                                </div>
+                                <div class="gallery-image swiper-slide ">
+                                    <img src="https://picsum.photos/600/600?random=3" class="rounded-lg">
+                                </div>
+                                <div class="gallery-image swiper-slide ">
+                                    <img src="https://picsum.photos/600/600?random=4" class="rounded-lg">
+                                </div>
+                                <div class="gallery-image swiper-slide ">
+                                    <img src="https://picsum.photos/600/600?random=5" class="rounded-lg">
+                                </div>
+                                <div class="gallery-image swiper-slide ">
+                                    <img src="https://picsum.photos/600/600?random=6" class="rounded-lg">
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
                     </div>
-                    <div class="flex flex-row flex-wrap justify-between mt-2">
-                        <a href="#"
-                            class=" flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
-                                class="w-5 h-5 mr-2" src="/icons/businessman.png">About Us</a>
-                        <a href="#"
-                            class="flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
-                                class="w-5 h-5 mr-2" src="/icons/money.png">Payment</a>
-                        <a href="#"
-                            class="flex-shrink-0 mt-2 bg-transparent px-4 py-2 hover:bg-blue-600 rounded-md border-2 outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform  flex text-sm"><img
-                                class="w-5 h-5 mr-2" src="/icons/pdf.png">PDF's</a>
+                    <div class="gallery-images-container mt-4">
+                        <span class=" float-left mb-3 title1 ">Videos</span>
+                        <div class="swiper mySwiper">
+                            <div class="gallery-images swiper-wrapper ">
+                                <div class="gallery-video swiper-slide  ">
+                                    <img src="/icons/play.png" class="video-play-icon">
+                                    <img src="https://picsum.photos/600/600?random=7" class="rounded-lg">
+                                </div>
+                                <div class="gallery-video swiper-slide ">
+                                    <img src="/icons/play.png" class="video-play-icon">
+                                    <img src="https://picsum.photos/600/600?random=8" class="rounded-lg">
+                                </div>
+                                <div class="gallery-video swiper-slide ">
+                                    <img src="/icons/play.png" class="video-play-icon">
+                                    <img src="https://picsum.photos/600/600?random=9" class="rounded-lg">
+                                </div>
+                                <div class="gallery-video swiper-slide ">
+                                    <img src="/icons/play.png" class="video-play-icon">
+                                    <img src="https://picsum.photos/600/600?random=10" class="rounded-lg">
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <button
+        <nav class="navbar flex flex-row  justify-between px-8  ">
+            <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="/icons/save.png"></a>
+            <a class="nav-link" href="#"><img href="#" class="nav-bar-icon" src="/icons/share.png"></a>
+            <a class="nav-link nav-bar-home active" href="#"><img href="#" class="nav-bar-icon"
+                    src="/icons/telephone-outline.png"></a>
+            <a class="nav-link nav-bar-user" href="#"><img href="#" class="nav-bar-icon "
+                    src="/icons/whatsapp-outline.png"></a>
+            <a class="nav-link nav-bar-products" href="#"><img href="#" class="nav-bar-icon"
+                    src="/icons/envelope-outline.png"></a>
+            <a class="nav-link nav-bar-user" href="#"><img href="#" class="nav-bar-icon "
+                    src="/icons/earth-grid-symbol.png"></a>
+
+
+        </nav>
+        <!-- <button
             class="bg-green-500 h-12 overflow-hidden w-full absolute bottom-0 rounded-b-2xl flex flex-row justify-center items-center">
-            <!--share icon img-->
+            
             <img src="https://img.icons8.com/external-bearicons-outline-color-bearicons/64/000000/external-share-essential-collection-bearicons-outline-color-bearicons.png"
                 class="h-8 w-8 mr-2" />
             <p class="text-white">Share MyDcard</p>
-        </button>
+        </button> -->
     </div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -204,6 +434,16 @@
 
         });
     });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true
+        }
+    });
+    
 </script>
 
 </html>
