@@ -365,13 +365,13 @@
                 padding-bottom: 50px;
             }
 
-            .profile-screen{
+            /* .profile-screen{
                 height: 80vh;
                 max-height: 100vh;
                 overflow-y: auto;
                 overflow-x: hidden;
                 padding-bottom: 50px;
-            }
+            } */
 
 
             .img {
@@ -847,63 +847,38 @@
 </script>
 <script>
     $(document).ready(function () {
-        //home screen swipe
-        var home = document.querySelector('.home-screen');
-        var hammer = new Hammer(home);
-        hammer = new Hammer.Manager(home, {
-            touchAction: 'auto',
-            recognizers: [
-                [Hammer.Pan, {
-                    direction: Hammer.DIRECTION_VERTICAL
-                }],
-            ]
-        });
-        hammer.get('pan').set({
-            direction: Hammer.DIRECTION_ALL
-        });
-        hammer.on("panleft", function (ev) {
-            $('.menu-item').find('a').removeClass('active');
-            $('.menu-item-products').find('a').addClass('active');
-            ToggleMenu('products')
-        });
+        // //home screen swipe
+        // var home = document.querySelector('.home-screen');
+    
+        // Hammer(home).on("swipeleft", function() {
+        //     $('.menu-item').find('a').removeClass('active');
+        //     $('.menu-item-products').find('a').addClass('active');
+        //     ToggleMenu('products')
+        // });
 
-        //product screen swipe
-        var products = document.querySelector('.products-screen');
-        var hammer1 = new Hammer(products);
-        hammer1 = new Hammer.Manager(products, {
-            touchAction: 'auto',
-            recognizers: [
-                [Hammer.Pan, {
-                    direction: Hammer.DIRECTION_VERTICAL
-                }],
-            ]
-        });
-        hammer1.get('pan').set({
-            direction: Hammer.DIRECTION_ALL
-        });
-        hammer1.on("panleft", function (ev) {
-            $('.menu-item').find('a').removeClass('active');
-            $('.menu-item-profile').find('a').addClass('active');
-            ToggleMenu('profile')
-        });
-        hammer1.on("panright", function (ev) {
-            $('.menu-item').find('a').removeClass('active');
-            $('.menu-item-home').find('a').addClass('active');
-            ToggleMenu('home')
-        });
+        // //product screen swipe
+        // var products = document.querySelector('.products-screen');
+ 
+        // Hammer(products).on("swipeleft", function() {
+        //     $('.menu-item').find('a').removeClass('active');
+        //     $('.menu-item-profile').find('a').addClass('active');
+        //     ToggleMenu('profile')
+        // });
+        // Hammer(products).on("swiperight", function() {
+        //     $('.menu-item').find('a').removeClass('active');
+        //     $('.menu-item-home').find('a').addClass('active');
+        //     ToggleMenu('home')
+        // });
 
-        //profile screen swipe
-        var profile = document.querySelector('.profile-screen');
-        var hammer2 = new Hammer(profile);
-        hammer2.get('pan').set({
-            direction: Hammer.DIRECTION_ALL
-        });
+        // //profile screen swipe
+        // var profile = document.querySelector('.profile-screen');
+        // Hammer(profile).on("swiperight", function() {
+        //     $('.menu-item').find('a').removeClass('active');
+        //     $('.menu-item-products').find('a').addClass('active');
+        //     ToggleMenu('products')
+        // });
 
-        hammer2.on("panright", function (ev) {
-            $('.menu-item').find('a').removeClass('active');
-            $('.menu-item-products').find('a').addClass('active');
-            ToggleMenu('products')
-        });
+        //menu screen swipe
         $('.menu-item').click(function () {
             $('.menu-item').find('a').removeClass('active');
             $(this).find('a').addClass('active');
