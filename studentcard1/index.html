@@ -490,13 +490,16 @@
 
                             <ul>
                                 <li class="text-sm text-gray-600">
-                                    <img src="icons/documents.png" class="w-5 h-5 inline mr-2"/><span class="inline text-sm">Document 1 </span>
+                                    <img src="icons/documents.png" class="w-5 h-5 inline mr-2" /><span
+                                        class="inline text-sm">Document 1 </span>
                                 </li>
                                 <li class="text-sm text-gray-600 mt-2">
-                                    <img src="icons/documents.png" class="w-5 h-5 inline mr-2"/><span class="inline text-sm">Document 1 </span>
+                                    <img src="icons/documents.png" class="w-5 h-5 inline mr-2" /><span
+                                        class="inline text-sm">Document 1 </span>
                                 </li>
                                 <li class="text-sm text-gray-600 mt-2">
-                                    <img src="icons/documents.png" class="w-5 h-5 inline mr-2"/><span class="inline text-sm">Document 1 </span>
+                                    <img src="icons/documents.png" class="w-5 h-5 inline mr-2" /><span
+                                        class="inline text-sm">Document 1 </span>
                                 </li>
                             </ul>
 
@@ -610,7 +613,8 @@
                             <div class="flex flex-row justify-between items-center">
                                 <p class="text-xs text-green-600 font-bold">Rs 5000</p>
                                 <div>
-                                    <img src="icons/whatsapp1.png" class="w-5 h-5 inline-block mr-2 cursor-pointer" onclick="modalHandler(true)">
+                                    <img src="icons/whatsapp1.png" class="w-5 h-5 inline-block mr-2 cursor-pointer"
+                                        onclick="modalHandler(true)">
                                     <button
                                         class="inline-block bg-green-500 text-xs rounded-full font-bold text-white px-2 py-1 transition duration-300 ease-in-out hover:bg-green-600 mr-2"
                                         onclick="modalHandler(true)">
@@ -659,7 +663,8 @@
                             <div class="flex flex-row justify-between items-center">
                                 <p class="text-xs text-green-600 font-bold">Rs 5000</p>
                                 <div>
-                                    <img src="icons/whatsapp1.png" class="w-5 h-5 inline-block mr-2 cursor-pointer" onclick="modalHandler(true)">
+                                    <img src="icons/whatsapp1.png" class="w-5 h-5 inline-block mr-2 cursor-pointer"
+                                        onclick="modalHandler(true)">
                                     <a href=""
                                         class="inline-block bg-green-500 text-xs rounded-full font-bold text-white px-2 py-1 transition duration-300 ease-in-out hover:bg-green-600 mr-2">
                                         Enquiry
@@ -707,7 +712,8 @@
                             <div class="flex flex-row justify-between items-center">
                                 <p class="text-xs text-green-600 font-bold">Rs 5000</p>
                                 <div>
-                                    <img src="icons/whatsapp1.png" class="w-5 h-5 inline-block mr-2 cursor-pointer" onclick="modalHandler(true)">
+                                    <img src="icons/whatsapp1.png" class="w-5 h-5 inline-block mr-2 cursor-pointer"
+                                        onclick="modalHandler(true)">
                                     <a href=""
                                         class="inline-block bg-green-500 text-xs rounded-full font-bold text-white px-2 py-1 transition duration-300 ease-in-out hover:bg-green-600 mr-2">
                                         Enquiry
@@ -826,8 +832,54 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/hammer.min.js"></script>
+<script>
+
+
+</script>
 <script>
     $(document).ready(function () {
+        //home screen swipe
+        var home = document.querySelector('.home-screen');
+        var hammer = new Hammer(home);
+        hammer.get('pan').set({
+            direction: Hammer.DIRECTION_ALL
+        });
+        hammer.on("panleft", function (ev) {
+            $('.menu-item').find('a').removeClass('active');
+            $('.menu-item-products').find('a').addClass('active');
+            ToggleMenu('products')
+        });
+
+        //product screen swipe
+        var products = document.querySelector('.products-screen');
+        var hammer1 = new Hammer(products);
+        hammer1.get('pan').set({
+            direction: Hammer.DIRECTION_ALL
+        });
+        hammer1.on("panleft", function (ev) {
+            $('.menu-item').find('a').removeClass('active');
+            $('.menu-item-profile').find('a').addClass('active');
+            ToggleMenu('profile')
+        });
+        hammer1.on("panright", function (ev) {
+            $('.menu-item').find('a').removeClass('active');
+            $('.menu-item-home').find('a').addClass('active');
+            ToggleMenu('home')
+        });
+
+        //profile screen swipe
+        var profile = document.querySelector('.profile-screen');
+        var hammer2 = new Hammer(profile);
+        hammer2.get('pan').set({
+            direction: Hammer.DIRECTION_ALL
+        });
+
+        hammer2.on("panright", function (ev) {
+            $('.menu-item').find('a').removeClass('active');
+            $('.menu-item-products').find('a').addClass('active');
+            ToggleMenu('products')
+        });
         $('.menu-item').click(function () {
             $('.menu-item').find('a').removeClass('active');
             $(this).find('a').addClass('active');
